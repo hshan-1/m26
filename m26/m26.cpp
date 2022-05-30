@@ -19,11 +19,16 @@ void encoder(string file_name)
     if (!infile.bad())
     {
         cout << infile.rdbuf();
+        string infile;
+        const char* codeit= (infile.c_str());
+        cout <<codeit;
+
     }
     else
     {
-        //typer();
+        
     }
+
 }
 void typer(string file_name)
 {
@@ -48,7 +53,7 @@ void typer(string file_name)
             code.close();
             break;
         }
-        else
+        else//something is messed up here 
         {
             code << content << endl;
 
@@ -60,10 +65,11 @@ void typer(string file_name)
 }
 void deleter(string file_name)
 {
-    string extension = ".txt";
-    const char* c_extension = extension.c_str();
+    string extension = ".txt";//not working 
+    const char* c_extension = extension.c_str();//not working 
     const char* c_file_name = (file_name.c_str());
-    remove(c_file_name);
+    remove(c_file_name);//can you do it any other way? 
+   //¯\_(ツ)_/¯
 }
 int mainmenu()
 {
